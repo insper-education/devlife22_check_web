@@ -1,0 +1,11 @@
+[
+{
+    "model": "loja.pedido",
+    "pk": 3,
+    "fields": {
+        "cliente": 1,
+        "valor_total": "0.00",
+        "pago": false
+    }
+}
+]

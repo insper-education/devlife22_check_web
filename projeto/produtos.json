@@ -1,0 +1,29 @@
+[
+{
+    "model": "loja.produto",
+    "pk": 1,
+    "fields": {
+        "nome": "Mouse Logitech",
+        "descricao": "Mouse cor perta da marca logitech",
+        "preco": "20.00"
+    }
+},
+{
+    "model": "loja.produto",
+    "pk": 2,
+    "fields": {
+        "nome": "Caderno modelo XYZ",
+        "descricao": "Cadeno modelo XYZ da marca Y",
+        "preco": "35.00"
+    }
+},
+{
+    "model": "loja.produto",
+    "pk": 3,
+    "fields": {
+        "nome": "Teste 1",
+        "descricao": "Testando....",
+        "preco": "1.00"
+    }
+}
+]

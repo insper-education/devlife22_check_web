@@ -1,0 +1,20 @@
+[
+{
+    "model": "loja.cliente",
+    "pk": 1,
+    "fields": {
+        "nome": "Tio João",
+        "cpf": "020.365.589-33",
+        "endereco": ""
+    }
+},
+{
+    "model": "loja.cliente",
+    "pk": 2,
+    "fields": {
+        "nome": "Tia Carla",
+        "cpf": "111.222.333-55",
+        "endereco": ""
+    }
+}
+]

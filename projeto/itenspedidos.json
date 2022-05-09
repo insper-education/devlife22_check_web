@@ -1,0 +1,29 @@
+[
+{
+    "model": "loja.itempedido",
+    "pk": 6,
+    "fields": {
+        "produto": 1,
+        "pedido": 3,
+        "quantidade": 1
+    }
+},
+{
+    "model": "loja.itempedido",
+    "pk": 7,
+    "fields": {
+        "produto": 2,
+        "pedido": 3,
+        "quantidade": 101
+    }
+},
+{
+    "model": "loja.itempedido",
+    "pk": 8,
+    "fields": {
+        "produto": 3,
+        "pedido": 3,
+        "quantidade": 2
+    }
+}
+]
