@@ -1,0 +1,22 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<hr style="width:100%">
+
+<h2> Produto {{ produto.nome }} </h2>
+
+<ul>
+    <ul>
+      <li><b>Descrição</b> {{produto.descricao}} </li>
+      <li><b>Preço</b> {{produto.preco}} </li>
+    </ul>
+</ul>
+
+<hr style="width:100%">
+    <h2>
+      [<a href="{%url 'loja:add_produto' %}">Novo Produto</a>]
+    </h2>
+
+{% endblock %}

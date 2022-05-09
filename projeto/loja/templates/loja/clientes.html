@@ -1,0 +1,17 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<hr style="width:100%">
+
+<h2> Lista de clientes </h2>
+
+<ul>
+    <ul>
+      {% for cliente in clientes %}
+      <li><h3><a href="{% url 'loja:detail_cliente' cliente.id %}">{{ cliente.nome }}</a></h3></li>
+      {% endfor %}
+    </ul>
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<hr style="width:100%">
+
+<h2> Aqui estão os nossos produtos... </h2>
+
+<ul>
+    <ul>
+      {% for produto in produtos %}
+      <li><h3><a href="{% url 'loja:detail_produto' produto.id %}">{{ produto.nome }}</a></h3></li>
+      {% endfor %}
+    </ul>
+</ul>
+{% endblock %}

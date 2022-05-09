@@ -1,0 +1,20 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<hr style="width:100%">
+
+<form action="{% url 'loja:add_produto' %}" method="post">
+  {% csrf_token %}
+
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome"><br>
+  <label for="lname">Descrição:</label><br>
+  <input type="text" id="descricao" name="descricao"><br>
+  <label for="lname">Preço:</label><br>
+  <input type="number" id="preco" name="preco"><br>
+  <input type="submit" value="Cadastrar"><br>
+  </form>
+
+{% endblock %}

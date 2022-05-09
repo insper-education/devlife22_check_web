@@ -1,0 +1,18 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<hr style="width:100%">
+
+<h2> Cliente {{ cliente.nome }} </h2>
+
+<ul>
+    <ul>
+      <li><b>Nome:</b> {{cliente.nome}} </li>
+      <li><b>CPF:</b> {{cliente.cpf}} </li>
+      <li><b>Endereço:</b> {{cliente.endereco}} </li>
+    </ul>
+</ul>
+
+{% endblock %}

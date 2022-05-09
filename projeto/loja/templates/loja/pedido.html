@@ -1,0 +1,68 @@
+{% extends "loja/base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% if pedido == '' %}
+
+<form action="{% url 'loja:add_item' %}" method="post">
+    {% csrf_token %}
+
+    <label for="solicitante">Selecione o cliente:</label>
+    <select id="solicitante" name="solicitante" size="4" single>
+        {% for cliente in clientes %}
+        <option value="{{cliente.id}}">{{cliente.nome}}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="produto">Escolha um produto:</label>
+    <select id="produto" name="produto" size="4" single>
+        {% for produto in produtos %}
+        <option value="{{produto.id}}">{{produto.nome}}</option>
+        {% endfor %}
+    </select><br><br>
+    <label for="quantidade">e a quantidade: </label>
+    <input type="number" id="quantidade" name="quantidade"><br><br>
+    
+    <button type="submit" value="submit">Adicionar item</button>
+</form>
+
+{% else %}
+
+<form action="{% url 'loja:add_item' %}" method="post">
+    {% csrf_token %}
+
+    <h2>Cliente: {{cliente.nome}}</h2>
+    <h2>Número do pedido: {{pedido}}</h2>
+    <h2>Itens no pedido: </h2>
+
+    <ul>
+        <ul>
+          {% for item in itens %}
+          <li><h3>{{ item }}</h3></li>
+          {% endfor %}
+        </ul>
+    </ul>
+
+    <br><br>
+
+    <input type="hidden" value="{{cliente.id}}" name="solicitante" />
+    <input type="hidden" value="{{pedido}}" name="pedido" />
+
+    <label for="produto">Escolha um produto para adicionar ao pedido:</label>
+    <select id="produto" name="produto" size="4" single>
+        {% for produto in produtos %}
+        <option value="{{produto.id}}">{{produto.nome}}</option>
+        {% endfor %}
+    </select><br><br>
+    <label for="quantidade">e a quantidade: </label>
+    <input type="number" id="quantidade" name="quantidade"><br><br>
+    
+    <button type="submit" value="submit">Adicionar item</button>
+</form>
+
+
+{% endif %}
+
+
+{% endblock %}
